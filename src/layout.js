@@ -1,3 +1,4 @@
+//import libs
 import Expo, { LinearGradient } from 'expo';
 import React from 'react';
 import {
@@ -9,23 +10,26 @@ import { Alert, Platform } from 'react-native';
 import styles from './styles';
 import Map from './screens/map';
 
+//definição de components
 export default class Layout extends React.Component{
 
+// definição de ação botão map
   onFingerClick = function(){
     return <Map/>;
     }
-
+// definição de ação botão Menu
   onMenuClick = function(){
     Alert.alert('Abre Menu');
   }
 
+//conteudo gerado na tela
   render() {
     return (
       <Container>
         <LinearGradient
                colors={['#efe','#898']}
                style={{flex:1}}>
-
+               //statusbar transparent
           <View style={{ height:Expo.Constants.statusBarHeight }} />
 
               <Header>

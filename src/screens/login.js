@@ -1,3 +1,4 @@
+//import libs
 import Expo, { LinearGradient } from 'expo';
 import React from 'react';
 import {
@@ -8,6 +9,7 @@ import {
 } from 'native-base';
 import { Alert } from 'react-native';
 
+//contrução do components
 export default class Login extends React.Component{
 
   constructor(props){
@@ -20,16 +22,18 @@ export default class Login extends React.Component{
     this.onPress = this.onPress.bind(this);
   }
 
+//função dos espaços de email
   onPress = function(){
     const { email, senha } = this.state;
   }
+  //conteudo da tela
   render() {
     return (
       <Container>
         <LinearGradient
                colors={['#efe','#898']}
                style={{flex:1}}>
-
+//statusbar transparent
           <View style={{ height:Expo.Constants.statusBarHeight }} />
 
               <Header>
