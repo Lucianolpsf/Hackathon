@@ -1,22 +1,27 @@
 {
-  "expo": {
-    "name": "hackathon",
-    "description": "An empty new project",
-    "slug": "hackathon",
-    "privacy": "public",
-    "sdkVersion": "21.0.0",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "primaryColor": "#cccccc",
-    "icon": "./assets/icons/app-icon.png",
-    "loading": {
-      "icon": "./assets/icons/loading-icon.png"
-    },
-    "packagerOpts": {
-      "assetExts": ["ttf", "mp4"]
-    },
-    "ios": {
-      "supportsTablet": true
-    }
-  }
+	"expo":{
+		"name": "reboot-hackaton",
+		"description": "Reboot Hackaton",
+		"version": "1.0.0",
+		"slug": "reboot-hackaton",
+		"privacy": "unlisted",
+		"sdkVersion": "21.0.0",
+		"orientation": "portrait",
+		"primaryColor": "#999999",
+		"icon": "./assets/icons/logotype.png",
+		"loading": {
+			"icon":"./assets/icons/logotype.png",
+			"backgroundImage": "./assets/icons/splash.png",
+			"hideExponentText": true
+		},
+		"ios": {
+			"supportsTablet": false,
+			"bundleIdentifier": "br.com.applegal.reboot",
+			"buildNumber":"010000"
+		},
+		"android": {
+			"package": "br.com.applegal.reboot",
+			"versionCode":10000
+		}
+	}
 }
