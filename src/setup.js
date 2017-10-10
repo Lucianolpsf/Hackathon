@@ -1,13 +1,12 @@
 //import libs
 import Expo from 'expo';
 import React from 'react';
-import {
-  View, Icon, Button,
-  Left, Right, Item, Label
-} from 'native-base';
-import Layout from './layout';
-import Map from './screens/map';
+
+import Navegacao from './navigation';
 //construção de components
 export default class AppSetup extends React.Component {
-
+//renderiza na tela as paginas para Navegacao do aplicativo
+render(){
+  return <Navegacao/>
+}
 }

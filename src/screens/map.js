@@ -6,7 +6,7 @@ import {
   Form, Input, Item, Label
 } from 'native-base';
 import React from 'react';
-import { Platform, Alert } from 'react-native';
+import { Platform, Alert, Image } from 'react-native';
 
 export default class Map extends React.Component{
   constructor(props) {
@@ -16,7 +16,7 @@ export default class Map extends React.Component{
     }
     this.onPress = this.onPress.bind(this);
   }
-
+//função dos botões
   onMenuClick = function(){
     Alert.alert('Abre Menu');
   }
@@ -47,6 +47,10 @@ _getLocationAsync = async () => {
   this.setState({ location });
 }
 
+static navigationOptions = {
+  tabBarLabel: 'Map'
+}
+//conteudo gerado na tela
 render() {
   return (
     <Container>
@@ -77,13 +81,6 @@ render() {
 
         <Content style={{padding:8}}></Content>
 
-          <Footer>
-            <Left>
-              <Button transparent onPress={this.onFingerClick}>
-                <Icon name={'map'}/>
-              </Button>
-            </Left>
-          </Footer>
       </LinearGradient>
     </Container>
   );
