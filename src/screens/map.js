@@ -6,7 +6,10 @@ import {
   Form, Input, Item, Label
 } from 'native-base';
 import React from 'react';
-import { Platform, Alert, Image } from 'react-native';
+import styles from './../components/styles';
+import { Platform, Alert, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import Cabecalho from './../components/header';
+import Rodape from './../components/footer';
 
 export default class Map extends React.Component{
   constructor(props) {
@@ -17,10 +20,6 @@ export default class Map extends React.Component{
     this.onPress = this.onPress.bind(this);
   }
 //função dos botões
-  onMenuClick = function(){
-    Alert.alert('Abre Menu');
-  }
-
 onPress = function(){
   const { location } = this.state;
   console.log(location);
@@ -47,29 +46,18 @@ _getLocationAsync = async () => {
   this.setState({ location });
 }
 
-static navigationOptions = {
-  tabBarLabel: 'Map'
-}
 //conteudo gerado na tela
 render() {
   return (
     <Container>
-      <LinearGradient
-             colors={['#efe','#898']}
-             style={{flex:1}}>
 
         <View style={{ height:Expo.Constants.statusBarHeight }} />
 
-            <Header>
-                <Left>
-                  <Button transparent onPress={this.onMenuClick}>
-                      <Icon name={'menu'}/>
-                  </Button></Left>
-                <Body><Title>Reboot</Title></Body>
-            </Header>
+        <Cabecalho/>
 
             <MapView style={{
-              flex:1
+              flex:1,
+              height:'100%'
             }}>
               {this.state.location &&
                 <MapView.Marker
@@ -79,9 +67,8 @@ render() {
               }
             </MapView>
 
-        <Content style={{padding:8}}></Content>
+        <Rodape/>
 
-      </LinearGradient>
     </Container>
   );
  }
