@@ -1,15 +1,15 @@
 //import libs
 import Expo from 'expo';
 import React from 'react';
-import { Text, View } from 'react-native';
-
-import {TabNavigator} from 'react-navigation';
+import { TabNavigator } from 'react-navigation';
 import Rank from './screens/rank';
 import Map from './screens/map';
 import Camera from './screens/camera';
 import Plantio from './screens/plantio';
 
-//lista as telas e as apresenta como botoes
+//lista as telas e as apresenta como botoes, utilizando o react-navigation
+//gostariamos de no proximo bransh deixar esse tipo de Navegacao e utilizar
+//navegação pelos botoes ja prontos
 var Navegacao = TabNavigator({
     Tab1: {screen: Plantio},
     Tab2: {screen:Camera},
