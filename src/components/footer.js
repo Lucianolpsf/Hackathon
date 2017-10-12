@@ -1,4 +1,4 @@
-//import de lib utilizadas
+import Expo, { AppLoading } from 'expo';
 import {
   Button, Container, Header,
   Content, Footer, Left, Body
@@ -9,12 +9,18 @@ import React from 'react';
 
 //criando o component
 export default class Rodape extends React.Component{
-
 //renderizando botoes personalizados como Rodape
+  constructor(props){
+    super(props);
+  }
+  onNavClick = function(route){
+    this.props.navigation.navigate(route);
+  }
   render(){
+    const { navigation } = this.props;
     return (
           <Footer style={styles.footer}>
-                  <TouchableOpacity style={styles.button}>
+                  <TouchableOpacity onPress={this.onNavClick.bind(this,'Tab1')} style={styles.button}>
                         <Image
                         style={styles.image}
                         resizeMode="contain"
@@ -22,7 +28,7 @@ export default class Rodape extends React.Component{
                         />
                   </TouchableOpacity>
 
-                  <TouchableOpacity style={styles.button}>
+                  <TouchableOpacity onPress={this.onNavClick.bind(this,'Tab2')} style={styles.button}>
                         <Image
                         style={styles.image}
                         resizeMode="contain"
@@ -30,7 +36,7 @@ export default class Rodape extends React.Component{
                         />
                   </TouchableOpacity>
 
-                  <TouchableOpacity style={styles.button}>
+                  <TouchableOpacity onPress={this.onNavClick.bind(this,'Tab3')} style={styles.button}>
                         <Image
                         style={styles.image}
                         resizeMode="contain"
@@ -38,7 +44,7 @@ export default class Rodape extends React.Component{
                         />
                   </TouchableOpacity>
 
-                  <TouchableOpacity style={styles.button}>
+                  <TouchableOpacity onPress={this.onNavClick.bind(this,'Tab4')} style={styles.button}>
                         <Image
                         style={styles.image}
                         resizeMode="contain"

@@ -8,7 +8,9 @@ import Cabecalho from './../components/header';
 
 
 export default class Plantio extends React.Component{
-
+  constructor(props){
+    super(props);
+  }
   render(){
     return (
     <Container>
@@ -29,7 +31,7 @@ export default class Plantio extends React.Component{
                   <Text style={styles.texto}> Educacional </Text>
             </TouchableOpacity>
           </View>
-        <Rodape/>
+        <Rodape navigation={this.props.navigation}/>
 
 
       </LinearGradient>

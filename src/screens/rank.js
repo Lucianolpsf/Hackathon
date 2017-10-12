@@ -8,7 +8,9 @@ import Cabecalho from './../components/header';
 
 
 export default class Plantio extends React.Component{
-  
+  constructor(props){
+    super(props);
+  }
   render(){
     return (
     <Container>
@@ -25,7 +27,7 @@ export default class Plantio extends React.Component{
                   Aqui deve aparecer a lista de hortas cadastradas.
               </Text>
           </View>
-        <Rodape/>
+        <Rodape navigation={this.props.navigation}/>
 
 
       </LinearGradient>

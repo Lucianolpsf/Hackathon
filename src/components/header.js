@@ -12,15 +12,15 @@ export default class Cabecalho extends React.Component{
 //proximo bransh deseja-se a listagem de paginas* no icone de menu superior
   render(){
     return (
-          <Header style={styles.header}>
-              <Left>
-                <Button style={styles.menu}
-                      onPress={this.onMenuClick}>
-                    <Icon name={'menu'}/>
-                </Button>
-              </Left>
-              <Body><Title style={styles.headerTexto}>HORT-UP</Title></Body>
-          </Header>
-        )
-      }
+        <Header style={styles.header}>
+            <Left>
+              <Button style={styles.menu}
+                    onPress={this.onMenuClick}>
+                  <Icon name={'menu'}/>
+              </Button>
+            </Left>
+            <Body><Title style={styles.headerTexto}>HORT-UP</Title></Body>
+        </Header>
+    )
   }
+}
