@@ -14,9 +14,6 @@ export default class Plantio extends React.Component{
   render(){
     return (
     <Container>
-      <LinearGradient
-             colors={['#6ad8d1','#abfdf8']}
-             style={{flex:1}}>
 
         <View style={{ height:Expo.Constants.statusBarHeight }} />
 
@@ -32,9 +29,6 @@ export default class Plantio extends React.Component{
             </TouchableOpacity>
           </View>
         <Rodape navigation={this.props.navigation}/>
-
-
-      </LinearGradient>
     </Container>
   );
   }

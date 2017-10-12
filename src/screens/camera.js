@@ -23,11 +23,7 @@ export default class Plantio extends React.Component{
     const { hasCameraPermission } = this.state;
     return (
     <Container>
-      <LinearGradient
-             colors={['#6ad8d1','#abfdf8']}
-             style={{flex:1}}>
-
-        <View style={{ height:Expo.Constants.statusBarHeight }} />
+      <View style={{ height:Expo.Constants.statusBarHeight }} />
 
         <Cabecalho/>
         <Camera style={{ flex: 1 }} type={this.state.type}>
@@ -59,9 +55,6 @@ export default class Plantio extends React.Component{
           </Camera>
 
         <Rodape navigation={this.props.navigation}/>
-
-
-      </LinearGradient>
     </Container>
   );
   }

@@ -41,17 +41,20 @@ const styles = StyleSheet.create({
     backgroundColor:'transparent',
     borderColor:'transparent',
     height:'100%',
-    width:'15%',
+    width:'25%',
     marginBottom:8,
     justifyContent: 'center',
     alignItems: 'center'
   },
 
   image:{
+    height:30,
+    width:30,
+  },
 
-    height:40,
-    width:40,
-
+  logotype:{
+    height:100,
+    width:100,
   },
 
   button2:{
@@ -65,7 +68,7 @@ const styles = StyleSheet.create({
   },
 
   footer:{
-    backgroundColor: '#abfdf8',
+    backgroundColor: '#1fb2a8',
 
   },
 

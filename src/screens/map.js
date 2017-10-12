@@ -1,4 +1,4 @@
-import Expo,{ MapView, Location, Constants, Permissions, LinearGradient } from 'expo';
+import Expo,{ MapView, Location, Constants, Permissions } from 'expo';
 import {
   View, Title, Icon, Button,
   Container, Header, Content, Footer,
@@ -22,7 +22,6 @@ export default class Map extends React.Component{
 //função dos botões
 onPress = function(){
   const { location } = this.state;
-  console.log(location);
 }
 
 componentWillMount(){

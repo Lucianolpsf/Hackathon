@@ -30,9 +30,6 @@ export default class Login extends React.Component{
   render() {
     return (
       <Container>
-        <LinearGradient
-               colors={['#efe','#898']}
-               style={{flex:1}}>
 //statusbar transparent
           <View style={{ height:Expo.Constants.statusBarHeight }} />
 
@@ -55,8 +52,6 @@ export default class Login extends React.Component{
 
 
           </Content>
-
-        </LinearGradient>
       </Container>
     );
   }
