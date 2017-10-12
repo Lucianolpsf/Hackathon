@@ -1,30 +1,29 @@
-import expo, { LinearGradient } from 'expo';
+import Expo from 'expo';
 import React from 'react';
-import { Text, Image, View, Alert, StyleSheet, TouchableOpacity } from 'react-native';
+import { Text, Image, View, StyleSheet } from 'react-native';
 import styles from './../components/styles';
 import {  Container, Content, Body } from 'native-base';
 import Rodape from './../components/footer';
 import Cabecalho from './../components/header';
 
 
-export default class Plantio extends React.Component{
-  constructor(props){
-    super(props);
-  }
+export default class Sobre extends React.Component {
+
   render(){
     return (
     <Container>
       <View style={{ height:Expo.Constants.statusBarHeight }} />
-
         <Cabecalho/>
-
           <View style={styles.view}>
-              <Text style={{fontSize:12}}>
-                  Aqui deve aparecer a lista de hortas cadastradas.
+          <Image
+          style={styles.logotype}
+          resizeMode="contain"
+          source={require('./../images/logotype.png')}
+          />
+              <Text style={{fontSize:20}}>
+                  Pagina sobre
               </Text>
-          </View>
-        <Rodape navigation={this.props.navigation}/>
-
+         </View>
     </Container>
   );
   }
