@@ -13,7 +13,7 @@ import Rodape from './../components/footer';
 
 export default class Map extends React.Component{
   constructor(props) {
-      super(props);
+    super(props);
     this.state = {
       location: null,
     }
@@ -67,7 +67,7 @@ render() {
               }
             </MapView>
 
-        <Rodape/>
+        <Rodape navigation={this.props.navigation}/>
 
     </Container>
   );

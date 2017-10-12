@@ -16,8 +16,9 @@ var Navegacao = TabNavigator({
     Tab3: {screen:Rank},
     Tab4: {screen:Map}
 }, {
-    tabBarPosition:'bottom',
-    swipEnabled:true,
+    navigationOptions:{
+      tabBarVisible:false
+    }
    }
 );
 Navegacao.navigationOptions ={
