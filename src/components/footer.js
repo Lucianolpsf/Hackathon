@@ -16,6 +16,7 @@ export default class Rodape extends React.Component{
   onNavClick = function(route){
     this.props.navigation.navigate(route);
   }
+
   render(){
     const { navigation } = this.props;
     return (

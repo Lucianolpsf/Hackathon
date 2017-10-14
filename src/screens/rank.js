@@ -4,8 +4,6 @@ import { Text, Image, View, Alert, StyleSheet, TouchableOpacity } from 'react-na
 import styles from './../components/styles';
 import {  Container, Content, Body } from 'native-base';
 import Rodape from './../components/footer';
-import Cabecalho from './../components/header';
-
 
 export default class Plantio extends React.Component{
   constructor(props){
@@ -14,17 +12,12 @@ export default class Plantio extends React.Component{
   render(){
     return (
     <Container>
-      <View style={{ height:Expo.Constants.statusBarHeight }} />
-
-        <Cabecalho/>
-
           <View style={styles.view}>
               <Text style={{fontSize:12}}>
                   Aqui deve aparecer a lista de hortas cadastradas.
               </Text>
           </View>
         <Rodape navigation={this.props.navigation}/>
-
     </Container>
   );
   }

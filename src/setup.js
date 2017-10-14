@@ -1,7 +1,7 @@
 //import libs
 import Expo, { AppLoading } from 'expo';
 import React from 'react';
-
+import Cabecalho from './components/header';
 import Navegacao from './navigation';
 //construção de components
 export default class AppSetup extends React.Component {
@@ -31,6 +31,6 @@ export default class AppSetup extends React.Component {
         />
       );
     }
-    return <Navegacao/>
+    return <Cabecalho/>
 }
 }

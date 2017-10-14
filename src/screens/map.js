@@ -7,8 +7,7 @@ import {
 } from 'native-base';
 import React from 'react';
 import styles from './../components/styles';
-import { Platform, Alert, Image, StyleSheet, TouchableOpacity } from 'react-native';
-import Cabecalho from './../components/header';
+import { Platform, StyleSheet, TouchableOpacity } from 'react-native';
 import Rodape from './../components/footer';
 
 export default class Map extends React.Component{
@@ -50,21 +49,22 @@ render() {
   return (
     <Container>
 
-        <View style={{ height:Expo.Constants.statusBarHeight }} />
-
-        <Cabecalho/>
-
-            <MapView style={{
+        <MapView style={{
               flex:1,
               height:'100%'
             }}>
-              {this.state.location &&
+
+
+              {this.state.location  &&
                 <MapView.Marker
-                  coordinate={{latitude:this.state.location.coords.latitude,longitude:this.state.location.coords.longitude}}
+                  coordinate={{latitude:this.state.location.coords.latitude,
+                               longitude:this.state.location.coords.longitude,
+                             }}
+
                   title={'Sua Localização'}
                 />
               }
-            </MapView>
+       </MapView>
 
         <Rodape navigation={this.props.navigation}/>
 

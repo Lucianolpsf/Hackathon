@@ -1,11 +1,9 @@
-import expo, { LinearGradient, Camera, Permissions } from 'expo';
+import expo, { Camera, Permissions } from 'expo';
 import React from 'react';
-import { Text, Image, View, Alert, StyleSheet, TouchableOpacity } from 'react-native';
+import { Text, Image, View, StyleSheet, TouchableOpacity } from 'react-native';
 import styles from './../components/styles';
 import {  Container, Content, Body } from 'native-base';
 import Rodape from './../components/footer';
-import Cabecalho from './../components/header';
-
 
 export default class Plantio extends React.Component{
   constructor(props){
@@ -23,9 +21,7 @@ export default class Plantio extends React.Component{
     const { hasCameraPermission } = this.state;
     return (
     <Container>
-      <View style={{ height:Expo.Constants.statusBarHeight }} />
 
-        <Cabecalho/>
         <Camera style={{ flex: 1 }} type={this.state.type}>
             <View
               style={{
@@ -48,7 +44,7 @@ export default class Plantio extends React.Component{
                 }}>
                 <Text
                   style={{ fontSize: 18, marginBottom: 10, color: 'white' }}>
-                  {' '}Mudar{' '}
+                  Mudar
                 </Text>
               </TouchableOpacity>
             </View>
