@@ -19,7 +19,9 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent',
     alignItems: 'center',
     justifyContent: 'center',
-    padding:8
+    padding:8,
+    paddingRight:8,
+    paddingLeft:8
   },
 
   texto: {
@@ -58,13 +60,27 @@ const styles = StyleSheet.create({
   },
 
   button2:{
+    height: 30,
+    width:'100%',
     backgroundColor:'#1fb2a8',
-    borderWidth:1,
-    borderRadius:4,
+    borderWidth:2,
+    borderRadius:8,
     borderColor:'darkgreen',
     alignItems: 'center',
     justifyContent: 'center',
-    marginBottom:20
+    marginBottom:10
+  },
+
+  button3:{
+    height: 40,
+    width:'100%',
+    backgroundColor:'transparent',
+    borderWidth:1,
+    borderRadius:8,
+    borderColor:'green',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom:10
   },
 
   footer:{

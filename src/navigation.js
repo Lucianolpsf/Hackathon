@@ -1,14 +1,11 @@
 //import libs
 import Expo from 'expo';
 import React from 'react';
-import { TabNavigator, DrawerNavigator } from 'react-navigation';
+import { TabNavigator } from 'react-navigation';
 import Rank from './screens/rank';
 import Map from './screens/map';
 import Camera from './screens/camera';
 import Plantio from './screens/plantio';
-import Sobre from './screens/sobre';
-import Cabecalho from './components/footer';
-
 
 var Navegacao = TabNavigator({
     Tab1: {screen: Plantio},
@@ -22,7 +19,6 @@ var Navegacao = TabNavigator({
     }
    }
 );
-
 
 Navegacao.navigationOptions ={
 title: "Tab exambple"
