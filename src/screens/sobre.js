@@ -6,7 +6,6 @@ import {  Container, Content, Body } from 'native-base';
 import Rodape from './../components/footer';
 import Cabecalho from './../components/header';
 
-
 export default class Sobre extends React.Component {
 
   render(){
@@ -20,8 +19,14 @@ export default class Sobre extends React.Component {
           resizeMode="contain"
           source={require('./../images/logotype.png')}
           />
-              <Text style={{fontSize:20}}>
-                  Pagina sobre
+              <Text style={{
+                    fontSize:12,
+                    alignItems:'center',
+                    justifyContent:'center',
+                    color:'gray'
+                }}>
+                  Este aplicativo, esta em desenvolvimento, atendendno os requisitos
+                  da iniciativa Hackathon 2ª edição, promovida pela Embrapa.
               </Text>
          </View>
     </Container>

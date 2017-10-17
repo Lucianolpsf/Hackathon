@@ -16,12 +16,19 @@ const styles = StyleSheet.create({
 
   view: {
     flex: 1,
-    backgroundColor: 'transparent',
+    backgroundColor: '#f6fffe',
     alignItems: 'center',
     justifyContent: 'center',
     padding:8,
     paddingRight:8,
     paddingLeft:8
+  },
+
+  viewSideBar: {
+    flex: 1,
+    backgroundColor: 'transparent',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 
   texto: {
