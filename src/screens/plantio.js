@@ -24,15 +24,15 @@ export default class Plantio extends React.Component{
             </Text>
 
             <TouchableOpacity style={styles.button2}>
-                  <Text style={styles.texto}> Horaliças Flores </Text>
+                  <Text style={styles.texto}> Hortaliças Flores </Text>
             </TouchableOpacity>
 
             <TouchableOpacity style={styles.button2}>
-                  <Text style={styles.texto}> Horaliças Folhosas </Text>
+                  <Text style={styles.texto}> Hortaliças Folhosas </Text>
             </TouchableOpacity>
 
             <TouchableOpacity style={styles.button2}>
-                  <Text style={styles.texto}> Horaliças Raízes </Text>
+                  <Text style={styles.texto}> Hortaliças Raízes </Text>
             </TouchableOpacity>
         </View>
       <Rodape navigation={this.props.navigation}/>

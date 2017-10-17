@@ -49,16 +49,25 @@ render() {
   return (
     <Container>
 
-        <MapView style={{
-              flex:1,
-              height:'100%'
+        <MapView
+              style={{
+                      flex:1,
+                      height:'100%'
+            }}
+              initialRegion={{
+                latitude: -15.871842,
+                longitude: -47.9920427,
+                latitudeDelta: 0.4500,
+                longitudeDelta: 0.3800,
             }}>
-
 
               {this.state.location  &&
                 <MapView.Marker
                   coordinate={{latitude:this.state.location.coords.latitude,
                                longitude:this.state.location.coords.longitude,
+
+          latitudeDelta: 0.0922,
+          longitudeDelta: 0.0421,
                              }}
 
                   title={'Sua Localização'}

@@ -22,7 +22,7 @@ export default class Plantio extends React.Component{
     return (
     <Container>
 
-        <Camera style={{ flex: 1 }} type={this.state.type}>
+        <Camera style={{ flex: 1}} type={this.state.type}>
             <View
               style={{
                 flex: 1,
@@ -43,7 +43,7 @@ export default class Plantio extends React.Component{
                   });
                 }}>
                 <Text
-                  style={{ fontSize: 18, marginBottom: 10, color: 'white' }}>
+                  style={{ fontSize: 10, marginBottom: 10, color: 'white' }}>
                   Mudar
                 </Text>
               </TouchableOpacity>
