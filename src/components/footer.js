@@ -33,19 +33,11 @@ export default class Rodape extends React.Component{
                         <Image
                         style={styles.image}
                         resizeMode="contain"
-                        source={require('./../images/camera.png')}
-                        />
-                  </TouchableOpacity>
-
-                  <TouchableOpacity onPress={this.onNavClick.bind(this,'Tab3')} style={styles.button}>
-                        <Image
-                        style={styles.image}
-                        resizeMode="contain"
                         source={require('./../images/rank.png')}
                         />
                   </TouchableOpacity>
 
-                  <TouchableOpacity onPress={this.onNavClick.bind(this,'Tab4')} style={styles.button}>
+                  <TouchableOpacity onPress={this.onNavClick.bind(this,'Tab3')} style={styles.button}>
                         <Image
                         style={styles.image}
                         resizeMode="contain"

@@ -16,7 +16,7 @@ import {
   Footer, FooterTab, Label
 } from 'native-base';
 
-class LoginScreen extends React.Component {
+class CadastroScreen extends React.Component {
   constructor(props){
     super(props);
     this.state = {
@@ -42,28 +42,26 @@ class LoginScreen extends React.Component {
         password: fields.passw
       };
       var query = `
-        mutation login ($email: String!,$password: String!) {
-          signinUser(email:{
-            email:$email,
-            password:$password
+        mutation cadastro ($email: String!,$password: String!) {
+          createUser(authProvider:{
+            email:{
+              email:$email,
+              password:$password
+            }
           }){
-            token
+            id
           }
         }
       `
       request('https://api.graph.cool/simple/v1/cj8dd65mt0h4y0124pcn0z290', query, variables)
       .then(data => {
         if (data) {
-          Expo.SecureStore.setItemAsync('loginToken',data.signinUser.token)
-          .then(function(res){
-            that.props.navigation.navigate('Tab1');
-          })
-        } else {
-
+          Alert.alert('Sucesso','Você se cadastrou com sucesso, faça o login.');
+          that.props.navigation.navigate('Login');
         }
       })
       .catch(function(res){
-        Alert.alert('Erro','Email ou senha inválidos.');
+        Alert.alert('Erro','Email já cadastrado.');
       });
     }
   }
@@ -82,7 +80,7 @@ class LoginScreen extends React.Component {
           <Content style={{padding:10}}>
           <View style={{ height:Expo.Constants.statusBarHeight }} />
             <Body>
-            <Title>Login</Title>
+            <Title>Cadastro</Title>
             </Body>
             <View style={{marginTop:10}} />
             <View style={styles.container}>
@@ -140,13 +138,13 @@ class LoginScreen extends React.Component {
               <View style={{marginTop:10}} />
               <Button block primary onPress={this.onSubmit}>
                 <Icon color={'white'} size={24} name={'sign-in'}/>
-                <Text>ENTRAR</Text>
+                <Text>Cadastrar-se</Text>
               </Button>
               <View style={{marginTop:10}} />
               <Grid>
                 <Col>
-                  <Button transparent small onPress={()=>navigate('Cadastro')}>
-                    <Text style={{color:'white'}} >NOVO USUÁRIO</Text>
+                  <Button transparent small onPress={()=>navigate('Login')}>
+                    <Text style={{color:'white'}} >Login</Text>
                   </Button>
                 </Col>
               </Grid>
@@ -173,4 +171,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default LoginScreen;
+export default CadastroScreen;

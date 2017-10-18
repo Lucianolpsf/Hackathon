@@ -39,7 +39,7 @@ closeDrawer = () => {
                       <Icon name={'menu'}/>
                   </Button>
                 </Left>
-                <Body><Title style={styles.headerTexto}>HORT-UP</Title></Body>
+                <Body><Title style={styles.headerTexto}> E-Horta </Title></Body>
             </Header>
           <Navegacao/>
     </Drawer>

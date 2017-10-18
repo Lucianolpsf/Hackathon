@@ -9,6 +9,7 @@ import Cabecalho from './../components/header';
 export default class Sobre extends React.Component {
 
   render(){
+
     return (
     <Container>
       <View style={{ height:Expo.Constants.statusBarHeight }} />

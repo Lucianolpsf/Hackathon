@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
 
   headerTexto: {
     color: 'white',
-    fontSize:30,
+    fontSize:24,
     fontWeight:'bold',
     justifyContent: 'center',
     alignItems: 'center'

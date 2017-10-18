@@ -38,7 +38,6 @@ state={
 
                     style={{ width: '100%',
                              height: 200,
-                             borderRadius:2,
                              marginBottom: 10
                            }}/>
                 }
