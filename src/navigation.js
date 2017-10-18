@@ -2,26 +2,25 @@
 import Expo from 'expo';
 import React from 'react';
 import { TabNavigator } from 'react-navigation';
-import Rank from './screens/rank';
+import RankNav from './screens/rankNav';
 import Map from './screens/map';
 import Camera from './screens/camera';
 import Plantio from './screens/plantio';
+import Login from './screens/login';
+import Cadastro from './screens/cadastro';
 
 var Navegacao = TabNavigator({
-    Tab1: {screen: Plantio},
-    Tab2: {screen:Camera},
-    Tab3: {screen:Rank},
-    Tab4: {screen:Map},
-    },
-    {
+  Login: {screen: Login },
+  Cadastro: {screen: Cadastro },
+  Tab1: {screen: Plantio},
+  Tab2: {screen:RankNav},
+  Tab3: {screen:Map},
+  }, {
+    initialRouteName:'Login',
     navigationOptions:{
       tabBarVisible:false
     }
-   }
+  }
 );
-
-Navegacao.navigationOptions ={
-title: "Tab exambple"
-};
 
 export default Navegacao;

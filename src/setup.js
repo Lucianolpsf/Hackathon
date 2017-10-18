@@ -4,6 +4,9 @@ import React from 'react';
 import Cabecalho from './components/header';
 import Navegacao from './navigation';
 import LoginScreen from './screens/login';
+import {
+  View, Text
+} from 'native-base';
 //construção de components
 export default class AppSetup extends React.Component {
   constructor(props){
@@ -32,6 +35,8 @@ export default class AppSetup extends React.Component {
         />
       );
     }
-    return <LoginScreen/>
-}
+    return (
+      <Cabecalho />
+    );
+  }
 }
